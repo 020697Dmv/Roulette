@@ -16,9 +16,10 @@ public class Roulette {
 	@Id
 	private Long idRoulette;
 	private HashMap<Integer, Bet> betList;
-	private String status;	
-	public Roulette(String status) {
-		this.status = status;
+	private String condition
+	;	
+	public Roulette(String condition) {
+		this.condition = condition;
 	}
 	public Roulette() {
 		betList = new HashMap<>();
@@ -37,12 +38,11 @@ public class Roulette {
 	public void setBetList(HashMap<Integer, Bet> betList) {
 		this.betList = betList;
 	}
-	public String getStatus() {
-		
-		return status;
+	public String getCondition() {
+		return condition;
 	}
-	public void setStatus(String status) {
-		this.status = status;
+	public void setCondition(String condition) {
+		this.condition = condition;
 	}
 	public void addBetToList(Bet bet) {
 		int key = betList.size();
